@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Farming Dashboard</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    h4 {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .card {
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    overflow: hidden;
+    }
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Warna teks */
+    .blue   { color: #007bff; }
+    .green  { color: #28a745; }
+    .yellow { color: #ffc107; }
+    .red    { color: #dc3545; }
+    .cyan   { color: #17a2b8; }
+    .dark   { color: #343a40; }
+
+    /* otomatis garis kiri sesuai value */
+    .card:has(.blue)   { border-left: 6px solid #007bff; }
+    .card:has(.green)  { border-left: 6px solid #28a745; }
+    .card:has(.yellow) { border-left: 6px solid #ffc107; }
+    .card:has(.red)    { border-left: 6px solid #dc3545; }
+    .card:has(.cyan)   { border-left: 6px solid #17a2b8; }
+
+    .progress {
+        height: 6px;
+        border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h4>Smart Farming</h4>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3">
+
+      <!-- KELEMBABAN -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value blue">KELEMBABAN (RH)</h6>
+          <div>54 %</div>
+        </div>
+      </div>
+
+      <!-- INTENSITAS CAHAYA -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value green">INTENSITAS CAHAYA (LUX)</h6>
+          <div>100 Lux</div>
+        </div>
+      </div>
+
+      <!-- KEKERUHAN -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value cyan">KEKERUHAN (TURBID)</h6>
+          <div>18 NTU</div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 40%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALIRAN AIR -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value red">ALIRAN AIR (WFLOW)</h6>
+          <div>34</div>
+        </div>
+      </div>
+
+      <!-- TEMPERATUR AIR -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value yellow">TEMPERATUR AIR (WTEMP)</h6>
+          <div>25 °C</div>
+        </div>
+      </div>
+
+       <!-- OKSIGEN TERLARUT -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value blue">OKSIGEN TERLARUT (DISS.OXYGEN)</h6>
+          <div>10 ppm</div>
+        </div>
+      </div>
+
+      <!-- TDS -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value green">TDS</h6>
+          <div>400 ppm</div>
+        </div>
+      </div>
+       
+      <!-- TEMPERATUR UDARA -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value cyan">TEMPERATUR UDARA (AMTEMP)</h6>
+          <div>34 °C</div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+
+       <!-- PH -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6  class="value red">PH</h6>
+          <div>7.1</div>
+        </div>
+      </div>
+
+      <!-- EC -->
+      <div class="col">
+        <div class="card p-3 text-center h-100">
+          <h6 class="value yellow">EC</h6>
+          <div>2</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
